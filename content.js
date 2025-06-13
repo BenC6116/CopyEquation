@@ -245,7 +245,7 @@ fetchContent("popup.html", popupHTML => {
         e.outerHTML = block
           ? `\\begin{equation*}\n${s.replaceAll("align*", "aligned")}\n\\end{equation*}\n\n`
           : `$${s}$`;
-      else e.outerHTML = block ? `${s}\n` : s;
+      else e.outerHTML = block ? `${s}\n<<<EQ-BREAK>>>\n` : s;
     });
 
     /* fenced code blocks → minted (LaTeX mode) */
